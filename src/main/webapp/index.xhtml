@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <!--Define composition-->
+    <ui:composition template="/template.xhtml">
+
+        <!--Define title-->
+        <ui:define name="title">
+            <h:outputText value="Welcome to Hat and Scarf"></h:outputText>
+        </ui:define>        
+
+        <!--Define body-->
+        <ui:define name="body">
+            
+            <h2><h:outputText value="Please select an option from below"></h:outputText></h2>
+            <!--Define panel-->
+            
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+
+            <table>
+                <tr>
+                    <td>
+                        <!--Create panel-->
+                        <h:form>  
+                            <h2>Create</h2>
+                            <h3><h:link outcome="/scarf/Create.xhtml" value="Create a Scarf"/><br /></h3>
+                            <h3><h:link outcome="/hat/Create.xhtml" value="Create a Hat"/><br /></h3>
+                            <h3><h:link outcome="/customer/Create.xhtml" value="Create a Customer"/><br /></h3>
+                            <h3><h:link outcome="/order/Create.xhtml" value="Create a New Order"/><br /><br /><br /></h3>
+                        </h:form>
+                    </td>
+                    <!--Lucky this isn't an html course...-->
+                    <td></td><td></td><td></td><td></td>
+                    <td>
+                        <!--View panel-->
+                        <h:form>
+                            <h2>View/Modify</h2>
+                            <h3><h:link outcome="/scarf/List.xhtml" value="View Scarfs"/><br /></h3>
+                            <h3><h:link outcome="/hat/List.xhtml" value="View Hats"/><br /></h3>
+                            <h3><h:link outcome="/customer/List.xhtml" value="View Customers"/><br /></h3>
+                            <h3><h:link outcome="/order/List.xhtml" value="View Orders"/><br /></h3>
+                        </h:form>   
+                    </td><td></td><td></td><td></td><td></td>
+                    <!--Lucky this isn't an html course...-->
+                    <td>
+                        <!--Search panel-->
+                        <h:form>
+                            <h2>Search</h2>
+                            <h3><h:link outcome="/scarf/Search.xhtml" value="Search Scarfs"/><br /></h3>
+                            <h3><h:link outcome="/hat/Search.xhtml" value="Search Hats"/><br /></h3>
+                            <h3><h:link outcome="/customer/Search.xhtml" value="Search Customers"/><br /></h3>
+                            <h3><h:link outcome="/order/Search.xhtml" value="Search Orders"/><br /></h3>
+                        </h:form>   
+                    </td>
+                </tr>
+            </table>
+        </ui:define>
+
+        <!--Define navi-->
+        <ui:define name="navi">
+            <h:form>
+                <br />
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+
+</html>
+
