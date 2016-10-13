@@ -22,6 +22,7 @@
 - [Usage](#usage)
 - [Screenshots](#screenshots)
 - [License](#license)
+
 ## Synopsis
 'A' company needs to build an e-business system. The system is a typical 3 - tier enterprise
 application that integrates a presentation tier, a business tier, and a persistence tier. The
